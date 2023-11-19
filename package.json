@@ -1,0 +1,38 @@
+{
+  "name": "hog-api",
+  "version": "1.0.0",
+  "description": "REST API for House of Glamour ecommerce ecosystem",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "env-cmd -f ./server/.env nodemon server/index.js",
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/einbulinda/hog-api.git"
+  },
+  "keywords": [
+    "ecommerce",
+    "API"
+  ],
+  "author": "Einstein Bulinda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/einbulinda/hog-api/issues"
+  },
+  "homepage": "https://github.com/einbulinda/hog-api#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.1",
+    "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "nodemon": "^3.0.1"
+  }
+}
