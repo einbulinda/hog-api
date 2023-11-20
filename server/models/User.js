@@ -1,7 +1,9 @@
-import { Schema, model } from "mongoose";
-import { isEmail } from "validator";
+import mongoose, { Schema, model } from "mongoose";
+import validator from "validator";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+
+const { isEmail } = validator;
 
 //Create User schema for creating new users.
 const userSchema = new Schema(

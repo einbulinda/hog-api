@@ -2,12 +2,12 @@
   "name": "hog-api",
   "version": "1.0.0",
   "description": "REST API for House of Glamour ecommerce ecosystem",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "env-cmd -f ./server/.env nodemon server/index.js",
-    "start": "node server/index.js"
+    "dev": "env-cmd -f ./server/.env nodemon server/server.js",
+    "start": "node server/server.js"
   },
   "repository": {
     "type": "git",

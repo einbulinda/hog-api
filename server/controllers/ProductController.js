@@ -1,9 +1,11 @@
-import Product from "../models/Product";
+import Product from "../models/Product.js";
+import ProductAttribute from "../models/ProductAttribute.js";
+import Inventory from "../models/Inventory.js";
 
 const ProductController = {
   getAllProducts: async (req, res) => {
     try {
-      const products = await Product.find();
+      const products = await Product.find({});
       res.status(200).json(products);
     } catch (error) {
       console.error(error);
@@ -31,6 +33,8 @@ const ProductController = {
   createProduct: async (req, res) => {
     const {
       name,
+      sku,
+      brand,
       description,
       attributes,
       pricing,
@@ -44,6 +48,8 @@ const ProductController = {
     try {
       const newProduct = new Product({
         name,
+        sku,
+        brand,
         description,
         attributes,
         pricing,
