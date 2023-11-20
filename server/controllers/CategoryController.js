@@ -19,7 +19,7 @@ const CategoryController = {
 
       return !category
         ? res.status(404).json({ error: "Category Not Found" })
-        : res.status(200).json(product);
+        : res.status(200).json(category);
     } catch (error) {
       console.log(error);
       res.status(500).json({ error: "Internal Server Error" });
@@ -69,7 +69,7 @@ const CategoryController = {
 
     try {
       const deleteCategory = await Category.findByIdAndDelete(categoryId);
-      if (!deleteCategory) res.status(404).json({ error: "Product Not Found" });
+      if (!deleteCategory) res.status(404).json({ error: "Category Not Found" });
       else res.status(200).json({ message: "Category Deleted Successfully" });
     } catch (error) {
       console.error(error);

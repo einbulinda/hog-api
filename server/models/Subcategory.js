@@ -2,12 +2,13 @@ import { Schema, model } from "mongoose";
 
 const subcategorySchema = new Schema(
   {
-    name: { type: String, required: true },
+    name: { type: String, required: true, unique: true },
     category: {
       type: Schema.Types.ObjectId,
       ref: "Category",
       required: true,
     },
+    status: { type: Boolean, default: true },
   },
   { timestamps: true }
 );
